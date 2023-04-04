@@ -36,7 +36,7 @@ This project is the project in course **"Road to Data Engineer 2.0 Bootcamp"** b
 5. Upload pipeline python script : *audiobook_dag.py* to folder **dags**(connected to dag folder in Airflow), and PySpark python script : *cleaning_Pyspark.py* to folder **spark_job** by using Cloud shell
 6. Airflow generates Data Pipeline Orchestration and triggers following a schedule that config in *audiobook_dag.py*. DAG of this pipeline is shown below:
 
-    ![DAG_pic](C:\Coding\audiobook_project\pic_project\DAG.png)  
+    ![DAG_pic](https://github.com/Jacknvp/Audiobook_Project_DataEngineer/blob/main/pic_project/DAG.png)  
 
 7. Create a view table from a table in Dataset in **BigQuery**. Then use this view table to make Sales Dashboard in **Looker Studio**
 8. See the Sales Dashboard as the attached link below:  
