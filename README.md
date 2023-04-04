@@ -7,10 +7,13 @@ This project is the project in course **"Road to Data Engineer 2.0 Bootcamp"** b
 
 ## ***Folders and Files explaination***
 ---------------------
+**In *Github***
 - **dags** : store DAG script
     - audiobook_dag.py : DAG Python script for data pipeline by using Apache Airflow
-- **spark_job**
-    - cleaning_Pyspark.py : Python script(PySpark) used to summit in Dataproc for cleaning data
+- **spark_job** : store Pypark script for cleaning data 
+    - cleaning_Pyspark.py : Python script(PySpark) used to summit in Dataproc for cleaning data  
+
+**In *Google drive*** : following this link ---> [data in this project](https://drive.google.com/drive/folders/1yHOOobbNEBYs3EuL9_V5kf9JjHLY6Qxg?usp=share_link)
 - **data** : store data in this project
     - **input**
         - audible_data.csv : Audiobook data
