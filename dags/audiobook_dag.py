@@ -4,7 +4,6 @@ from airflow.operators.python import PythonOperator
 from airflow.providers.google.cloud.operators.dataproc import DataprocSubmitJobOperator
 from airflow.providers.mysql.hooks.mysql import MySqlHook
 from airflow.providers.google.cloud.transfers.gcs_to_gcs import GCSToGCSOperator
-from airflow.providers.google.cloud.transfers.gcs_to_bigquery import GCSToBigQueryOperator
 from airflow.utils.dates import days_ago
 import pandas as pd
 import requests
@@ -162,7 +161,10 @@ with DAG(
             --source_format=CSV --skip_leading_rows=1 \
             {destination_project_dataset_table} \
             gs://{BUCKET_NAME}/data/output/cleaned_output.csv \
-            timestamp:timestamp,user_id:string,country:string,Book_ID:integer,Book_Title:string,Book_Subtitle:string,Book_Author:string,Book_Narrator:string,Audio_Runtime:string,Audiobook_Type:string,Categories:string,Rating:string,Total_No_of_Ratings:float,Price:float,conversion_rate:float,THBPrice:float"
+            timestamp:timestamp,user_id:string,country:string,Book_ID:integer,Book_Title:string, \
+            Book_Subtitle:string,Book_Author:string,Book_Narrator:string,Audio_Runtime:string, \
+            Audiobook_Type:string,Categories:string,Rating:string,Total_No_of_Ratings:float, \
+            Price:float,conversion_rate:float,THBPrice:float"
     )
 
 
