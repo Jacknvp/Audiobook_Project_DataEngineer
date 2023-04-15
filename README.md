@@ -3,7 +3,7 @@ This project is the project in course **"Road to Data Engineer 2.0 Bootcamp"** b
 
 ## ***Introduction***
 ----------------
- The objective of this project is to manipulate, collect, and prepare data for Data Analyst as **Data Engineer** in the Audiobook shop company. In addition, use the completed data to create a dashboard following the business requirement that needs to know the best selling product for selecting the product and preparing appropriate promotions to increase audiobook sales. The initial data we used in this project is in the company's database (**MySQL**) that collect from the company website.
+ The objective of this project is to collect, integrate, transform, and clean data for Data Analyst **as Data Engineer** in the Audiobook shop company. In addition, use the completed data to create a dashboard following the business requirement that needs to know the best selling product for selecting the product to promote and preparing appropriate promotions to increase audiobook sales. The initial data we used in this project is in the company's database (**MySQL**) that collect from the company website.
 
 ## ***Folders and Files explaination***
 ---------------------
@@ -30,14 +30,14 @@ This project is the project in course **"Road to Data Engineer 2.0 Bootcamp"** b
     - Explore data in database(MySQL in this project), in database has 2 tables : audible_data and audible_transaction.
     - Then fetch conversion rate data from RESR API 
     - Mock the Transformation process using PANDAS and Data Cleaning using PySpark (Python API of Apache Spark) in colab notebook
-1. Create **Cloud Composer Cluster** for running **Apache Airflow** and install python package in Airflow (pymysql, requests, pandas)
+1. Create **Cloud Composer Cluster** for running **Apache Airflow** and install python package in cluster(pymysql, requests, pandas)
 2. **[ Credential!!! ]** Set MySQL connection on Apache Aiflow web server (Admin-->Connection-->mysql_default)
 3. Create **Cloud Dataproc Cluster** for running **Apache Spark** (in this project we use PySpark python script for cleaning data)
 4. Manipulate and Create folders as below:
     - Create folder **input** and **output** in folder **data** that is in the auto-generated Cloud Storage when we create Cloud Composer Cluster
     -  Create folder **spark_job** for Python script(PySpark) used to summit in Dataproc for cleaning data
 5. Upload pipeline python script : *audiobook_dag.py* to folder **dags**(connected to dag folder in Airflow), and PySpark python script : *cleaning_Pyspark.py* to folder **spark_job** by using Cloud shell
-6. Airflow generates Data Pipeline Orchestration and triggers following a schedule that config in *audiobook_dag.py*. DAG of this pipeline is shown below:
+6. Airflow implements Data Pipeline Orchestration and triggers following a schedule that config in *audiobook_dag.py*. DAG of this pipeline is shown below:
 
     ![DAG_pic](https://github.com/Jacknvp/Audiobook_Project_DataEngineer/blob/main/pic_project/DAG.png)  
 
