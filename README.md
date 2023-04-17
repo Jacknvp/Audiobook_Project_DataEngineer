@@ -28,7 +28,7 @@ This project is the project in course **"Road to Data Engineer 2.0 Bootcamp"** b
 --------------
 0. Plan to manipulate the project using colab notebook
     - Explore data in database(MySQL in this project), in database has 2 tables : audible_data and audible_transaction.
-    - Then fetch conversion rate data from RESR API 
+    - Then fetch conversion rate data from REST API 
     - Mock the Transformation process using PANDAS and Data Cleaning using PySpark (Python API of Apache Spark) in colab notebook
 1. Create **Cloud Composer Cluster** for running **Apache Airflow** and install python package in cluster(pymysql, requests, pandas)
 2. **[ Credential!!! ]** Set MySQL connection on Apache Aiflow web server (Admin-->Connection-->mysql_default)
