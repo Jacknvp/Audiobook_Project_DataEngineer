@@ -34,8 +34,11 @@ This project is the project in course **"Road to Data Engineer 2.0 Bootcamp"** b
 2. **[ Credential!!! ]** Set MySQL connection on Apache Aiflow web server (Admin-->Connection-->mysql_default)
 3. Create **Cloud Dataproc Cluster** for running **Apache Spark** (in this project we use PySpark python script for cleaning data)
 4. Manipulate and Create folders as below:
-    - Create folder **input** and **output** in folder **data** that is in the auto-generated Cloud Storage when we create Cloud Composer Cluster
-    -  Create folder **spark_job** for Python script(PySpark) used to summit in Dataproc for cleaning data
+    - In the auto-generated Cloud Storage when we create Cloud Composer Cluster
+        - Create folder **input** and **output** in folder **data** for input and output data in this project
+        - Create folder **spark_job** for Python script(PySpark) used to summit in Dataproc for cleaning data
+    - In the auto-generated Cloud Storage (HDFS) when we create Cloud Dataproc Cluster
+        - Create folder **data** for input data and output data from data cleaning
 5. Upload pipeline python script : *audiobook_dag.py* to folder **dags**(connected to dag folder in Airflow), and PySpark python script : *cleaning_Pyspark.py* to folder **spark_job** by using Cloud shell
 6. Airflow implements Data Pipeline Orchestration and triggers following a schedule that config in *audiobook_dag.py*. DAG of this pipeline is shown below:
 
