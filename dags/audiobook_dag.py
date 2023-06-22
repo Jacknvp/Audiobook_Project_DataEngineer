@@ -60,7 +60,6 @@ def get_data_from_mysql(transaction_path,data_path,trans_path):
     audible_transaction = mysqlserver.get_pandas_df(sql="SELECT * FROM audible_transaction")
 
     df = audible_transaction.merge(audible_data, left_on="book_id", right_on="Book_ID", how="left")
-    df.drop('book_id', axis=1, inplace=True)
 
     audible_data.to_csv(data_path, index=False)
     audible_transaction.to_csv(trans_path, index=False)
